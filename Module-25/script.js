@@ -43,10 +43,6 @@ document.getElementById('lighter-button').addEventListener('click', function () 
 })
 
 
-
-
-
-
 //button style using js 
 const buttons = document.getElementsByTagName('button')
 for (const button of buttons) {

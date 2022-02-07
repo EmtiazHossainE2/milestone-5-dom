@@ -7,6 +7,11 @@ for (const p of blogPost) {
     console.log(p.innerText)
 }
 
+let nodeList = document.querySelectorAll('.blog');
+var myArray = Array.prototype.slice.call(nodeList);
+
+
+
 // get Element by id  
 
 const title2 = document.getElementById('title-2')

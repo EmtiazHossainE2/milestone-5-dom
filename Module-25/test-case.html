@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>this is comment </h1>
+    <section>
+        <div id="comment-container">
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum aliquid quia est. Exercitationem, atque
+                quidem. Id, ratione nulla, dolor consequatur, autem eligendi modi repellendus nostrum maiores in minima
+                dolorum quidem.</p>
+            <p>Iste consequatur est voluptas temporibus delectus nulla repellat labore, sunt minus at, architecto sit
+                perspiciatis quibusdam ipsum earum suscipit molestiae? Quos nulla ab voluptates quo voluptatem
+                architecto deserunt, veniam vitae!</p>
+            <p>Adipisci maiores consequuntur unde optio iure pariatur hic laudantium provident? Nobis natus modi
+                voluptatum voluptate porro odit quidem voluptates veritatis excepturi ex, dignissimos cum delectus optio
+                assumenda fuga omnis et!</p>
+        </div>
+        <div>
+            <textarea name="" id="new-comment" cols="60" rows="5"></textarea>
+            <br>
+            <button id="submit-comment">Submit </button>
+        </div>
+    </section>
+    <script>
+        //step-1
+        document.getElementById('submit-comment').addEventListener('click', function () {
+            //step-2
+            const commentBox = document.getElementById('new-comment');
+            //step -3
+            const newComment = document.createElement('p');
+            newComment.innerText = commentBox.value;
+
+            //step -4 
+            const commentContainer = document.getElementById('comment-container');
+            commentContainer.append(newComment);
+
+            ////5. step 5
+            commentBox.value = '';
+        })
+    </script>
+</body>
+
+</html>

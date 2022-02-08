@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recap Comment </title>
+</head>
+
+<body>
+    <header>
+        <h1>This is my Heading </h1>
+    </header>
+    <main>
+        <section id="comment-area">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente quo quos veritatis, repudiandae
+                debitis a quidem, tempore non molestias voluptatum recusandae commodi culpa magnam hic assumenda
+                deserunt quis maxime aperiam!</p>
+            <p>Dolor dicta voluptas, deleniti eaque nulla et recusandae quisquam commodi aliquam fuga odit dolorem
+                accusamus quis corporis, quos magnam nisi ipsa rem voluptatibus. Modi accusantium vero iusto quaerat ab
+                sunt.</p>
+            <p>Saepe quasi possimus vero dignissimos quod assumenda consequatur ducimus ratione. Dignissimos, quia
+                explicabo voluptate adipisci illum rerum quam aperiam pariatur sapiente, nihil ipsa necessitatibus qui
+                sit omnis fugit molestiae ratione.</p>
+        </section>
+        <section>
+            <h4>Post your comment here</h4>
+            <textarea name="" id="comment-box" cols="50" rows="4"></textarea>
+            <br>
+            <button id="post-button">Post Your Comment</button>
+        </section>
+    </main>
+
+    <script>
+        document.getElementById('post-button').addEventListener('click', function () {
+            const commentBox = document.getElementById('comment-box');
+            const newComment = document.createElement('p');
+            newComment.innerText = commentBox.value;
+            const commentArea = document.getElementById('comment-area');
+            commentArea.append(newComment);
+            commentBox.value = '';
+        })
+    </script>
+</body>
+
+</html>

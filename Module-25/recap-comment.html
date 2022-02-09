@@ -38,7 +38,7 @@
             const newComment = document.createElement('p');
             newComment.innerText = commentBox.value;
             const commentArea = document.getElementById('comment-area');
-            commentArea.append(newComment);
+            commentArea.appendChild(newComment);
             commentBox.value = '';
         })
     </script>

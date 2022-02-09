@@ -35,8 +35,8 @@ blog2.style.fontWeight = 'blod'
 
 
 const query = document.querySelectorAll('.blog p')
-for (const num of query) {
-    num.style.color = 'green'
+for (const p of query) {
+    p.style.color = 'green'
 }
 
 // get and add element using js 

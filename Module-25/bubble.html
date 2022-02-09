@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bubble Js</title>
+</head>
+
+<body>
+    <h2> This is bubble js </h2>
+    <section id="section-container">
+        <ul id="list-container">
+            <li class="item">Lorem, ipsum.</li>
+            <li class="item">Aliquam, iste?</li>
+            <li id="third-item" class="item">Tenetur, totam.</li>
+            <li class="item">Provident, quae?</li>
+            <li class="item">Odit, inventore!</li>
+        </ul>
+    </section>
+    <script>
+        //third item click 
+        document.getElementById('third-item').addEventListener('click', function () {
+            console.log('li clicked');
+        })
+
+        //ul click 
+        document.getElementById('list-container').addEventListener('click', function () {
+            console.log('ul clicked')
+        })
+        //section  click 
+        document.getElementById('section-container').addEventListener('click', function () {
+            console.log('section clicked')
+        })
+
+    </script>
+    <script src="bubble.js"></script>
+</body>
+
+</html>

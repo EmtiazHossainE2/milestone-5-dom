@@ -22,7 +22,14 @@ document.getElementById('delete-confirm').addEventListener('keyup', function (ev
     }
 })
 //change 
-document.getElementById('delete-confirm').addEventListener('change', function () {
-    const deleteConfirm = document.getElementById('delete-confirm');
-    console.log(deleteConfirm.value);
+document.getElementById('delete-confirm').addEventListener('change', function (event) {
+    // const deleteConfirm = document.getElementById('delete-confirm');
+    // console.log(deleteConfirm.value);
+    let deleted = document.getElementById('delete-btn');
+    if (event.target.value == 'delete') {
+        deleted.removeAttribute('disabled')
+    }
+    else {
+        deleted.setAttribute('disabled', true)
+    }
 })

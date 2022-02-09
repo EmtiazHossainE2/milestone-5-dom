@@ -42,7 +42,6 @@ document.getElementById('lighter-button').addEventListener('click', function () 
     document.body.style.backgroundColor = '#b3da65';
 })
 
-
 //button style using js 
 const buttons = document.getElementsByTagName('button')
 for (const button of buttons) {

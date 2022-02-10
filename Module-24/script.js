@@ -33,7 +33,6 @@ blog2.style.fontSize = '20px'
 blog2.style.fontWeight = 'blod'
 
 
-
 const query = document.querySelectorAll('.blog p')
 for (const p of query) {
     p.style.color = 'green'

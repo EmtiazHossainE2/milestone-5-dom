@@ -22,15 +22,15 @@
             <div class="grid  lg:grid-cols-3  gap-4">
                 <div class="bg-blue-400 px-12 py-12 rounded text-white ">
                     <h3 class="text-3xl mb-2">Deposit</h3>
-                    <h3 class="text-4xl">$00</h3>
+                    <h3 class="text-4xl">$<span id="deposit-output">00</span> </h3>
                 </div>
                 <div class="bg-green-400 px-12 py-12 rounded text-white">
                     <h3 class="text-3xl mb-2">Withdraw</h3>
-                    <h3 class="text-4xl">$000</h3>
+                    <h3 class="text-4xl">$<span id="withdraw-output">000</span></h3>
                 </div>
                 <div class="bg-purple-400 px-12 py-12 rounded text-white">
                     <h3 class="text-3xl mb-2">Balance</h3>
-                    <h3 class="text-4xl">$20000</span> </h3>
+                    <h3 class="text-4xl">$<span id="balance-output">20000</span> </h3>
                 </div>
             </div>
         </section>
@@ -40,18 +40,20 @@
                 <div class="bg-red-300 p-8 rounded ">
                     <h3 class="text-3xl ">please deposit</h3>
                     <div>
-                        <input class="w-3/4 block px-2 rounded my-3 py-2 border-2 text-lg" type="text" name="" id=""
-                            placeholder="$ Amount you want to deposit">
-                        <button class="bg-orange-500 px-4 py-2 text-white rounded font-semibold">Deposit
+                        <input id="deposit-value" class="w-3/4 block px-2 rounded my-3 py-2 border-2 text-lg"
+                            type="text" name="" id="" placeholder="$ Amount you want to deposit">
+                        <button id="deposit-btn"
+                            class="bg-orange-500 px-4 py-2 text-white rounded font-semibold">Deposit
                         </button>
                     </div>
                 </div>
                 <div class="bg-teal-300 p-8 rounded ">
                     <h3 class="text-3xl">please withdraw</h3>
                     <div>
-                        <input class="w-3/4 block px-2 rounded my-3 py-2 border-2 text-lg" type="text" name="" id=""
-                            placeholder="$ Amount you want to withdraw">
-                        <button class="bg-green-500 px-4 py-2 text-white rounded font-semibold">Withdraw
+                        <input id="withdraw-value" class="w-3/4 block px-2 rounded my-3 py-2 border-2 text-lg"
+                            type="text" name="" id="" placeholder="$ Amount you want to withdraw">
+                        <button id="withdraw-btn"
+                            class="bg-green-500 px-4 py-2 text-white rounded font-semibold">Withdraw
                         </button>
                     </div>
                 </div>

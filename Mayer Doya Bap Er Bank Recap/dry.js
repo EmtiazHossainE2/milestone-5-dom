@@ -20,9 +20,18 @@ function getMoney(currentAmount, inputAmount) {
 
 //deposit calculation 
 document.getElementById('deposit-btn').addEventListener('click', function () {
+    if (depositValue.value > 0) {
+        const totalDeposit = addMoney(depositOutput.innerText, depositValue.value);
+        depositOutput.innerText = totalDeposit;
 
-    const totalDeposit = addMoney(depositOutput.innerText, depositValue.value);
-    depositOutput.innerText = totalDeposit;
+    }
+    else {
+        alert('enter positive value')
+        return;
+    }
+    /* const totalDeposit = addMoney(depositOutput.innerText, depositValue.value);
+
+    depositOutput.innerText = totalDeposit; */
     //balance output calculation
     const totalBalance = addMoney(balanceOutput.innerText, depositOutput.innerText);
     balanceOutput.innerText = totalBalance;
@@ -32,8 +41,13 @@ document.getElementById('deposit-btn').addEventListener('click', function () {
 
 // withdraw calculation 
 document.getElementById('withdraw-btn').addEventListener('click', function () {
-    const totalWithdraw = addMoney(withdrawOutput.innerText, withdrawValue.value);
-    withdrawOutput.innerText = totalWithdraw;
+    if (withdrawValue.value > 0) {
+        const totalWithdraw = addMoney(withdrawOutput.innerText, withdrawValue.value);
+        withdrawOutput.innerText = totalWithdraw;
+    }
+    else {
+        alert('Enter Positive Number')
+    }
 
     //balance output calculation 
     const totalBalance = getMoney(balanceOutput.innerText, withdrawOutput.innerText)

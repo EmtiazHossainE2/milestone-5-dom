@@ -42,10 +42,11 @@ document.getElementById('verify-btn').addEventListener('click', function () {
     if (showPin == typedNumbers) {
         verifySuccess.style.display = 'block';
         error.style.display = 'none'
+        typedNumbers = ''
     }
     else {
         verifySuccess.style.display = 'none';
         error.style.display = 'block'
     }
-    typedNumbers.value = ''
+
 })

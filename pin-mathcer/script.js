@@ -37,11 +37,15 @@ document.getElementById('key-pad').addEventListener('click', function (event) {
 document.getElementById('verify-btn').addEventListener('click', function () {
     const showPin = document.getElementById('show-pin').value;
     const typedNumbers = document.getElementById('typed-numbers').value;
+    const verifySuccess = document.getElementById('verify-success');
+    const error = document.getElementById('verify-error');
     if (showPin == typedNumbers) {
-        console.log('matched');
-        return
+        verifySuccess.style.display = 'block';
+        error.style.display = 'none'
     }
     else {
-        console.log('dont match')
+        verifySuccess.style.display = 'none';
+        error.style.display = 'block'
     }
+    typedNumbers.value = ''
 })

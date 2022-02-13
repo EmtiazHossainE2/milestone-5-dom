@@ -71,15 +71,3 @@ function calculateTotal() {
 
 
 
-//quiz  
-//7
-console.log(!isNaN("10X"));
-
-//9
-const product = 5;
-const price = "7";
-const subTotal = product * price;
-console.log(subTotal)
-const tax = subTotal / 10;
-const total = subTotal + tax;
-console.log(total)

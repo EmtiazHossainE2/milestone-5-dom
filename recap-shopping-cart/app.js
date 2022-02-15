@@ -1,22 +1,29 @@
 //common function 
-function getValue(isIncrease) {
-    const input = document.getElementById('input-value');
-    const inputValue = input.value;
+function getValue(product, isIncrease) {
+    const productInput = document.getElementById(product + '-value');
+    let productValue = productInput.value;
     if (isIncrease) {
-        input.value = parseInt(inputValue) + 1;
+        productInput.value = parseInt(productValue) + 1;
     }
-    else if (inputValue > 0) {
-        input.value = parseInt(inputValue) - 1;
+    else if (productValue > 0) {
+        productInput.value = parseInt(productValue) - 1;
     }
-
 }
-
 //phone plus
 document.getElementById('phone-plus').addEventListener('click', function () {
-    getValue(true)
+    getValue('phone', true)
 })
 
 //phone-minus 
 document.getElementById('phone-minus').addEventListener('click', function () {
-    getValue(false)
+    getValue('phone', false)
+})
+//case plus
+document.getElementById('case-plus').addEventListener('click', function () {
+    getValue('case', true)
+})
+
+//case-minus 
+document.getElementById('case-minus').addEventListener('click', function () {
+    getValue('case', false)
 })
